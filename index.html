@@ -6,16 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="public/css/main.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.js"
-        integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap" rel="stylesheet">
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
     <script src="public/js/main.js"></script>
 </head>
 
 <body>
-    <div class="search-container">
-        <input type="text" id="city" placeholder="Search a city...">
-        <button id="button">Try it</button>
+    <div class="search">
+        <input type="text" id="city" autocomplete="off" placeholder="Search a city...">
+        <div id="button"><i class="fa fa-search "></i></div>
     </div>
+    <div class="wrapper">
+    </div>
+    <!-- <div class="block"></div> -->
 </body>
 
 </html>
