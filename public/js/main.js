@@ -28,8 +28,8 @@ async function handleButtonPress(event) {
     const citiesResponse = await fetch(citiesURL);
     const citiesJSON = await citiesResponse.json();
     cityInfoURL = citiesJSON._embedded['city:search-results'][0]._links['city:item'].href;
-    // console.log(citiesJSON);
-    // console.log(citiesJSON._embedded['city:search-results'][0]._links['city:item'].href);
+    console.log(citiesJSON);
+    console.log(citiesJSON._embedded['city:search-results'][0]._links['city:item'].href);
 
     const cityInfoResponse = await fetch(cityInfoURL);
     const cityInfoJSON = await cityInfoResponse.json();
@@ -58,8 +58,8 @@ function newBlock(country) {
     if (!countrySet.has(country.name)) {
         $(newDiv).hide().appendTo(".wrapper").css("border", `solid 1px rgb(${r},${g},${b})`).fadeIn("slow");
         countrySet.add(country.name);
-        $("#city").attr("placeholder", "Search a city...");
+        $("#city").attr("placeholder", "🗽Search a city...🗼");
     } else {
-        $("#city").attr("placeholder", "Search something else");
+        $("#city").attr("placeholder", "🚫Search something else");
     }
 }
