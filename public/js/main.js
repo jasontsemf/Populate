@@ -3,8 +3,15 @@ let countrySet = new Set();
 window.addEventListener('DOMContentLoaded', function () {
     // DOM API
     const button = document.getElementById("button");
+    const input = document.getElementById("city");
     button.onclick = handleButtonPress;
-})
+    input.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+          event.preventDefault();
+          button.click();
+        }
+    });
+});
 
 async function handleButtonPress(event) {
     var city = $("#city").val();
